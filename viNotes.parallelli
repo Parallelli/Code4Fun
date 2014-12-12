@@ -10,6 +10,9 @@ select whole file gg(to the head of file) + (shift+G, to end of file) + y (yank,
 copy: y
 paste: p
 cut: d
+blcok tab: select the blcok by shift+V, shift + >> or + <<
+after yank, clear buffer: TBD
+copy interacts with outer clipbard: TBD
 ----my notes are a mess--------
 Cursor movement
 
