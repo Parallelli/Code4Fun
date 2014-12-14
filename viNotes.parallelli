@@ -3,7 +3,6 @@ under command mode, /pattern, press n to the next occurance
 //if you want highlight, put 'set hlsearch' in .vimrc
 left move a word => b
 right move a word => w
-block comment => TBD
 block delete => select it, delete it shift+V + (arrow move,hjkl) + d
 copy block => select it shift+V + (arrow move, hjkl) + y
 select whole file gg(to the head of file) + (shift+G, to end of file) + y (yank,i.e. copy)
@@ -11,8 +10,11 @@ copy: y
 paste: p
 cut: d
 blcok tab: select the blcok by shift+V, shift + >> or + <<
+go to a particular line => under command mode, :lineNum
+
 after yank, clear buffer: TBD
 copy interacts with outer clipbard: TBD
+block comment => TBD
 ----my notes are a mess--------
 Cursor movement
 
