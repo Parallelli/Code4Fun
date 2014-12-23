@@ -9,3 +9,9 @@ awk -f program-file input-file1 input-file2
 awk 'program'// you can specify no input file, awk program will treat stdin as its input to process, until EOF (crtl+z)
 In awk script, find pattern uses regular expression, which is equivalent to grep in bshell
 
+awk reads the input files one line per time. For each line, awk tries the pattern of each of the rules and runs actions when find such patterns. Then next line.
+
+Each line in awk program is a seperate rule
+
+awk ingores newlines after any of the following symbos and keywords: , { ? : || && do else
+a newline at any other point is considered the end of the satement, but you can use \ (backslash) to get to newline and continue

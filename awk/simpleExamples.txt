@@ -1,4 +1,13 @@
+#! /bin/awk/ -f
 awk 'BEGIN {print "Here is single quota <'\''>" }' #print "Here is single quota <'>
 #another way
 awk 'BEGIN {print "Here is single quota <'"'"'>" }'
 awk '/foo/ {print $0} 'BBS-list #foo is the pattern, $0 means print current line
+
+#print the total number of bytes in all files in current direcoty modified in Dec.
+ls -l | awk '$7=="Dec" {sum+=$5} END {print sum}' 
+
+#two rules in a awk program
+awk '/12/ {print $0}
+    /21/ {print $0}' BBS-list, inventory-shipped
+#we note that there is a duplicate case “Sabafoo…”, because it satisfies both rules, use uniq to deduplicate (brute force way), better use regular expression 
