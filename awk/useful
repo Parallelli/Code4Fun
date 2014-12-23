@@ -1,0 +1,31 @@
+#print the length of the longest input file
+awk '{if (length($0) > max) max = length($0) }
+    END {print max}' BBS-list
+
+#print every line that is longer than 50
+awk 'length($0) > 50' BBS-list
+
+#print the length of longest line in BBS-list
+#expand: change tabs into spaces, so the widths compared are actually the right-margin columns
+expand BBS-list | awk '{ if(x < length()) x = length() }
+    END { print "maximum line length is " x}'
+
+#print every non-empty line
+awk 'NF > 0' inventory-shipped
+
+#print 10 random numbers in range [0,100]
+awk 'BEGIN {for (i=1; i<=10; i++) print int(101*rand()) }'
+
+#print the total number of bytes used by files in current directory
+#$5 is the 5th column of the output of ls -l
+ls -l | awk '{ x+=$5} ; END {print "total bytes: " x}';
+
+#print a sorted list of the names of all users in BBS-list
+awk '{print $1}' BBS-list | sort
+
+#print even lines in file BBS-list
+awk 'NR%2==0' BBS-list 
+
+#count the lines in a file
+#note that if we only write awk '{print NR}' BBS-list, it will print the line number of each line in file BBS-list rather than the last one (line count)
+awk 'END {print NR}' BBS-list

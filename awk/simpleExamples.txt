@@ -1,0 +1,4 @@
+awk 'BEGIN {print "Here is single quota <'\''>" }' #print "Here is single quota <'>
+#another way
+awk 'BEGIN {print "Here is single quota <'"'"'>" }'
+awk '/foo/ {print $0} 'BBS-list #foo is the pattern, $0 means print current line

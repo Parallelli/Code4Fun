@@ -1,0 +1,11 @@
+#notes of effective awk programming
+a rule constis of a pattern followed by an action.
+pattern {action}
+awk 'program' input-file1 input-file2
+when the program is too long, do
+awk -f program-file input-file1 input-file2
+//tell shell to start awk and use this program to process input files
+//when the awk program is too long, we usually do it by writing it into a awk program and use -f program-file to call it
+awk 'program'// you can specify no input file, awk program will treat stdin as its input to process, until EOF (crtl+z)
+In awk script, find pattern uses regular expression, which is equivalent to grep in bshell
+
