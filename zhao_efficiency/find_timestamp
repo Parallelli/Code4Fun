@@ -1,3 +1,4 @@
+#! /bin/awk/ -f
 # It prints the timestamps from rows which have substring "Users:"
 # How to use it? 
 #   paste the following cmd in terminal; change the input_file_name to the real file name
