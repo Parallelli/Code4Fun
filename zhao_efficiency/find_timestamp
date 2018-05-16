@@ -1,0 +1,4 @@
+# It prints the timestamps from rows which have substring "Users:"
+# How to use it? 
+#   paste the following cmd in terminal; change the input_file_name to the real file name
+awk '/Users:/' input_file_name | awk '{print $2,$3}' | awk '{print substr($0, 2, length($0)-2)}'
